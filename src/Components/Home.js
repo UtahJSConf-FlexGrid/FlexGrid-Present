@@ -3,32 +3,8 @@ import logo from './img/flexgrid-pxlogo.jpg';
 import NavBar from './Components/NavBar.js';
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-  super(props)
-  this.state = {
-    screenIndex: 1
-  }
-}
-
+class Home extends Component {
   render() {
-
-    let ActiveScreen
-    <Sidebar posts={this.state.posts.posts}/>
-    if(this.state.screenIndex === 1) {
-      ActiveScreen = <Home />
-      // ActiveScreen = <Blog posts={this.state.posts.posts}/>
-    }
-    if(this.state.screenIndex === 2) {
-      ActiveScreen = <Flex />
-    }
-    if(this.state.screenIndex === 3) {
-      ActiveScreen = <Grid />
-    }
-    if(this.state.screenIndex === 4) {
-      ActiveScreen = <Combo />
-    }
-
     return (
       <div className="App">
       <NavBar />
