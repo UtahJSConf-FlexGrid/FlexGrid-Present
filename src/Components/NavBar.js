@@ -12,6 +12,7 @@ class NavBar extends Component {
             <div className="navButton" onClick={() => { this.props.updateScreen(3)}}>CSS Grid</div>
             <div className="navButton" onClick={() => { this.props.updateScreen(4)}}>Combo</div>
         </div>
+        
       </div>
     );
   }
