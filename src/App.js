@@ -11,10 +11,16 @@ import './styles/NavBar.css'
 class App extends Component {
   constructor(props) {
   super(props)
-  this.state = {
-    screenIndex: 1
+    this.state = {
+      screenIndex: 1
+    }
   }
-}
+
+  updateScreen(newScreenIndex) {
+    this.setState({
+      screenIndex: newScreenIndex
+    });
+  }
 
   render() {
 
