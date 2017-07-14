@@ -1,16 +1,47 @@
 import React, { Component } from 'react';
+import logo from './img/flexgrid-pxlogo.jpg';
 import NavBar from './Components/NavBar.js';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+  super(props)
+  this.state = {
+    screenIndex: 1
+  }
+}
+
   render() {
+
+    let ActiveScreen
+    <Sidebar posts={this.state.posts.posts}/>
+    if(this.state.screenIndex === 1) {
+      ActiveScreen = <Home />
+      // ActiveScreen = <Blog posts={this.state.posts.posts}/>
+    }
+    if(this.state.screenIndex === 2) {
+      ActiveScreen = <Flex />
+    }
+    if(this.state.screenIndex === 3) {
+      ActiveScreen = <Grid />
+    }
+    if(this.state.screenIndex === 4) {
+      ActiveScreen = <Combo />
+    }
+
     return (
       <div className="App">
-        <NavBar />
-        
+      <NavBar />
+        <div className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h2>Welcome to Flex and CSS Grid: Styling with Style</h2>
+        </div>
         <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          Before we begin we'd like to ask a couple of <code>coder</code> questions...
         </p>
+        <p>Who has heard of Flexbox? Used it?</p>
+        <p>Who has heard of CSS Grid? Used it?</p>
+        <p>Well, today Brian/Josh and I are going to descripe Flex and Grid. <br />We'll talk about their independent concepts and also how they can work well together. <br />Let's get started with Brian and the world of Flexbox.</p>
       </div>
     );
   }

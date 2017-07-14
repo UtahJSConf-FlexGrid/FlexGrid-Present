@@ -7,9 +7,9 @@ class NavBar extends Component {
       <div className="navbar">
         <div className="logo-brand">Styling With Style</div>
         <div className="navButtons">
-            <div className="navButton">FlexBox</div>
+            <div className="navButton">Flexbox</div>
             <div className="navButton">CSS Grid</div>
-            <div className="navButton">Combined</div>
+            <div className="navButton">Combo</div>
         </div>
       </div>
     );
