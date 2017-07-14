@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import '../styles/NavBar.css'
+import '../styles/Grid.css'
 
-class Combo extends Component {
+class Grid extends Component {
   render() {
     return (
-      <div className="navbar">
+      <div className="grid">
         <h1>Grid</h1>
       </div>
     );
   }
 }
 
-export default Combo;
+export default Grid;

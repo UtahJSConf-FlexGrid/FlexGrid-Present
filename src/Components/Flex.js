@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-// import '../styles/NavBar.css'
+import '../styles/Flex.css'
 
-class Combo extends Component {
+class Flex extends Component {
   render() {
     return (
-      <div className="navbar">
-      <h1>Flex</h1>
+      <div className="flex">
+        <h1>Flex</h1>
       </div>
     );
   }
 }
 
-export default Combo;
+export default Flex;

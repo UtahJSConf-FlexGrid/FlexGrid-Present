@@ -1,7 +1,7 @@
 .navbar {
     display: flex;
-    background-color: pink;
-    color: blue;
+    background-color: black;
+    color: white;
     justify-content: center;
     align-items: center;
 }
@@ -14,11 +14,10 @@
 .navButtons {
     display: flex;
     margin-left: auto;
-    color: green;
 }
 
 .navButton {
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid black;
     background-color: #000;
 }

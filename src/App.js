@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import logo from './img/flexgrid-pxlogo.jpg';
-import NavBar from './Components/NavBar.js';
+// import NavBar from './Components/NavBar.js';
+import Home from './Components/Home.js';
+import Flex from './Components/Flex.js';
+import Grid from './Components/Grid.js';
+import Combo from './Components/Combo.js';
 import './App.css';
+import './styles/NavBar.css'
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +19,7 @@ class App extends Component {
   render() {
 
     let ActiveScreen
-    <Sidebar posts={this.state.posts.posts}/>
+    // <Sidebar posts={this.state.posts.posts}/>
     if(this.state.screenIndex === 1) {
       ActiveScreen = <Home />
       // ActiveScreen = <Blog posts={this.state.posts.posts}/>
@@ -31,17 +36,19 @@ class App extends Component {
 
     return (
       <div className="App">
-      <NavBar />
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to Flex and CSS Grid: Styling with Style</h2>
+        {/*<NavBar />*/}
+        <div className="navbar">
+          <div className="logo-brand">Styling With Style</div>
+          <div className="navButtons">
+              <div className="navButton" onClick={() => { this.updateScreen(1)}}>Home</div>
+              <div className="navButton" onClick={() => { this.updateScreen(2)}}>Flexbox</div>
+              <div className="navButton" onClick={() => { this.updateScreen(3)}}>CSS Grid</div>
+              <div className="navButton" onClick={() => { this.updateScreen(4)}}>Combo</div>
+          </div>
         </div>
-        <p className="App-intro">
-          Before we begin we'd like to ask a couple of <code>coder</code> questions...
-        </p>
-        <p>Who has heard of Flexbox? Used it?</p>
-        <p>Who has heard of CSS Grid? Used it?</p>
-        <p>Well, today Brian/Josh and I are going to descripe Flex and Grid. <br />We'll talk about their independent concepts and also how they can work well together. <br />Let's get started with Brian and the world of Flexbox.</p>
+        <div>
+          {ActiveScreen}
+        </div>
       </div>
     );
   }
