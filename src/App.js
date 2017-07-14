@@ -44,7 +44,7 @@ class App extends Component {
       <div className="App">
         {/*<NavBar />*/}
         <div className="navbar">
-          <div className="logo-brand">Styling With Style</div>
+          <div className="logo-brand" onClick={() => { this.updateScreen(1)}}>Styling With Style</div>
           <div className="navButtons">
               <div className="navButton" onClick={() => { this.updateScreen(1)}}>Home</div>
               <div className="navButton" onClick={() => { this.updateScreen(2)}}>Flexbox</div>
