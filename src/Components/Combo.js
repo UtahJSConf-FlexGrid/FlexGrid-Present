@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-// import '../styles/NavBar.css'
+import '../styles/Combo.css'
 
 class Combo extends Component {
   render() {
     return (
-      <div className="navbar">
-      <h1>Combo</h1>
+      <div className="combo">
+        <h1>Combo</h1>
       </div>
     );
   }
