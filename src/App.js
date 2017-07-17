@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './img/flexgrid-pxlogo.jpg';
-// import NavBar from './Components/NavBar.js';
+import NavBar from './Components/NavBar.js';
 import Home from './Components/Home.js';
 import Flex from './Components/Flex.js';
 import Grid from './Components/Grid.js';
@@ -10,7 +10,9 @@ import './styles/NavBar.css'
 
 class App extends Component {
   constructor(props) {
-  super(props)
+    
+    super(props)
+    this.updateScreen = this.updateScreen.bind(this)
     this.state = {
       screenIndex: 1
     }
@@ -42,16 +44,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        {/*<NavBar />*/}
-        <div className="navbar">
-          <div className="logo-brand" onClick={() => { this.updateScreen(1)}}>Styling With Style</div>
-          <div className="navButtons">
-              <div className="navButton" onClick={() => { this.updateScreen(1)}}>Home</div>
-              <div className="navButton" onClick={() => { this.updateScreen(2)}}>Flexbox</div>
-              <div className="navButton" onClick={() => { this.updateScreen(3)}}>CSS Grid</div>
-              <div className="navButton" onClick={() => { this.updateScreen(4)}}>Combo</div>
-          </div>
-        </div>
+        <NavBar updateScreen={this.updateScreen} active={this.state.screenIndex}/>
         <div>
           {ActiveScreen}
         </div>
