@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    background-color: #000;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-brand {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.navButtons {
+    display: flex;
+    margin-left: auto;
+    color: #fff;
+}
+
+.navButton {
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: #000;
+}
